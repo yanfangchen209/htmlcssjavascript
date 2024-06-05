@@ -1,8 +1,9 @@
 import React from 'react'
+import classes from './StepperItem.module.css'
 
 const StepperItem = ({description}) => {
   return (
-    <div>{description}</div>
+    <span className={classes.circle}>{description}</span>
   )
 }
 export default StepperItem;

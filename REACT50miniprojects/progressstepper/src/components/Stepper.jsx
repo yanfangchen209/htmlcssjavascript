@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {StepperList} from './StepperList'
 import classes from './Stepper.module.css'
+
+
 const Stepper = ({totalSteps}) => {
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -14,12 +16,18 @@ const Stepper = ({totalSteps}) => {
 
  
   return (
-    <div className={classes['stepper-container']}>
-        <div className='progress-line'></div>
-        <StepperList stepNumberArray={stepNumberArray}/>
-        <button className='btn' id="prevbtn">Prev</button>
-        <button className='btn' id="nextbtn">Next</button>
-    </div>
+      <div className={classes['stepper-container']}>
+        <div className={classes['circle-Line-container']}>
+          <div className={classes['progress-line']}></div>
+          <StepperList stepNumberArray={stepNumberArray}/>
+        </div>
+        <button className={classes.btn} id="prevbtn">Prev</button>
+        <button className={classes.btn} id="nextbtn">Next</button>
+      </div>
+
+ 
+
+
   )
 }
 
