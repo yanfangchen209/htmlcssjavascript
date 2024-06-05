@@ -1,5 +1,6 @@
 .stepper-container {
     text-align: center;
+    width: 30%;
 }
 
 .circle-Line-container {
@@ -7,9 +8,10 @@
     justify-content: space-between;
     position: relative;
     margin-bottom: 30px;
+    width: 100%;
 }
 
-.progress-line::before {
+.circle-Line-container::before {
     content: '';
     background-color: #e0e0e0;
     position: absolute;
@@ -32,7 +34,6 @@
     width: 0%;
     z-index: -1;
     transition: 0.4s ease;
-
 }
 
 
@@ -42,20 +43,20 @@
     color: white;
     padding: 5px 15px;
     border: 0;
-    margin: 5px;
+    margin: 10px;
     border-radius: 5px;
 }
 
 .btn:active {
-
+    transform: scale(0.98);
 }
 
 .btn:focus {
-
+    outline: 0;
 }
 
 .btn:disabled {
-    background-color: aliceblue;
+    background-color: rgba(82, 105, 126, 0.347);
     cursor: not-allowed;
 
 }
