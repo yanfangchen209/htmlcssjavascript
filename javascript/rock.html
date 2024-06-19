@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make rock smile</title>
+    <script>
+        function greetOnLoad() {
+            alert("hello");
+        }
+        <!-- window.onload = greetOnLoad; -->
+        function handleClick() {
+          
+            let userName = prompt("what's your name？");
+            if(userName){
+                //send personalized greeting 
+                alert("hello " + userName + " , I am your pet stone.");
+                //make rock smile
+                document.getElementById("rock").src='smilingRock.jpg';
+            }
+        }
+    </script>
+
+</head>
+<body onload='greetOnLoad()'>
+    <img src='originalStock.jpg' id="rock" onclick="handleClick()" alt='rock'/>
+</body>
+</html>

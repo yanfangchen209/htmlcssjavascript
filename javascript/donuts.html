@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" href='donuts.css'/>
+    <script>
+   
+        function qtyChangeHandler(){
+            const DONUTPRICE = 0.5; 
+            const TAXRATE = 0.892; 
+
+            //The .value property of an <input> element always returns its value as a string, regardless of the type attribute of the <input> element.
+            let cakeqty= parseInt(document.getElementById('cakeqty').value);
+            let glazedqty = parseInt(document.getElementById('glazedqty').value);
+
+            if(isNaN(cakeqty)){
+                cakeqty = 0;
+            }
+            if(isNaN(glazedqty)){
+                glazedqty = 0;
+            }
+
+            let subtotal = DONUTPRICE * (cakeqty + glazedqty);
+            let tax = subtotal * TAXRATE;
+            let total = subtotal + tax;
+            document.getElementById("subtotal").value = subtotal.toFixed(2);
+            document.getElementById("tax").value = tax.toFixed(2);
+            document.getElementById("total").value = total.toFixed(2);
+
+        }
+
+        function validateName(){
+            let nameInput = document.getElementById("name").value;
+            if(!nameInput){
+                document.getElementById("nameErrorMessage").textContent = "Name is required.";
+            } else {
+                document.getElementById("nameErrorMessage").textContent = "";
+            }
+        }
+
+        /*If you are handling the form submission purely on the client-side with JavaScript (as indicated by 
+        onsubmit="return submitHandler()"), submitHandler() would typically prevent the default form submission, 
+        perform any client-side validation or processing, and possibly send the data to an API or handle it in
+         some other way without a page refresh.*/
+        function submitHandler(){
+            //data validation
+
+            //
+            return true;
+        }
+    </script>
+    <title>Donuts</title>
+</head>
+<body>
+    <h1>Duncan's Just-In-Time Donuts</h1>
+    <h2>All donuts 50 cents each, cake or glazed!</h2>
+    <form onsubmit='return submitHandler()'>
+        <label for='name'>Name:</label>
+        <input type="text" id='name' name='name'  onblur='validateName()' required/><br>
+        <span id='nameErrorMessage'></span><br>
+        <label for='cakeqty'># of cake donuts:</label>
+        <input id='cakeqty' name='cakeqty'   onchange='qtyChangeHandler()' type='number' required/><br>
+        <label for='glazedqty'># of glazed donuts:</label>
+        <input id='glazedqty' name='glazedqty' onchange='qtyChangeHandler()'type='number' required/><br>
+        <label for='waitingtime'>Minutes 'till pickup':</label>
+        <input type="number" step="0.01" min="0" id='waitingtime' name='waitingtime' required/><br>
+        <label for='subtotal'>Subtotal:</label>
+        <input type="number" step="0.01" min="0" id='subtotal' name='subtotal'/><br>
+        <label for='tax'>Tax:</label>
+        <input type="number" step="0.01" min="0" id='tax' name='tax'/><br>
+        <label for='total'>Total:</label>
+        <input type="number" step="0.01" min="0" id='total' name='total'/><br><br>
+        <button>Place Order</button>
+
+    </form>
+    
+</body>
+</html>
