@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='rock.js'></script>
+    <title>make rock smile</title>
+    <!-- window.onload = greetOnLoad; -->
+</head>
+<body onload='greetOnLoad(); setRockSize()'>
+    <img src='originalStock.jpg' id="rock" onclick="handleClick()" alt='rock'/>
+    <!-- <script>alert("hloo")</> -->
+
+</body>
+</html>
+<!--when loading the original stone, read from cookie, if username don't exisit in cookie list, just say hi, other
+wise give a personal greeting, when user click the rock, if username exist in cookie list, give personal greeting
+don't prompt user to enter name, if username doesn't exist, ask user for name and write to cookie so that next time
+read from a cookie and give personal greeting, modify the smiling picture, after 5 seconds without user interaction, change to sad stone-->

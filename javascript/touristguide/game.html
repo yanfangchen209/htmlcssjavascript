@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const data = [["sea.jpg", "welcome to sea world"], ["desert.jpg", "welcome to desert"]]
+        const handleClick = (i) => {
+
+            let originalImage = document.getElementById("image");
+            originalImage.src = data[i][0];
+            let originalIntro = document.getElementById("introduction");
+            originalIntro.innerHTML = data[i][1];
+            //remove two buttons
+
+            var button1 = document.querySelector('button[onclick="handleClick(0)"]');
+            var button2 = document.querySelector('button[onclick="handleClick(1)"]');
+            button1.remove();
+            button2.remove();
+
+        }
+    </script>
+</head>
+<body>
+    <image id="image" src='adventure.jpg' alt='explore' style='height: 200px;'></image><br>
+    <span id='introduction'></span>
+    <button onclick='handleClick(0)'>1</button>
+    <button onclick='handleClick(1)'>2</button>
+</body>
+</html>
