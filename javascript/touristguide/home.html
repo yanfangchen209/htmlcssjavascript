@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='home.css'/>
+    <link rel="stylesheet" type='text/css' href='menubar.css'/>
     <title>Document</title>
+    <script>
+        function setIframeUrl(url){
+            var myframe = document.getElementById('myframe');
+            myframe.src = url;
+        }
+    </script>
 </head>
 <body>
+    <ul>
+        <a href='#' onclick='setIframeUrl("game.html"); return false;'>Explore</a>
+        <a href='#' onclick='setIframeUrl("contact.html"); return false;'>Contact</a>
+    </ul>
+    <div id="iframe-container">
+        <iframe src="game.html" 
+                id='myframe'
+                width="100%" 
+                height="400" 
+                title="menu bar" 
+                frameborder="0" 
+                allowfullscreen 
+                sandbox="allow-same-origin allow-scripts">
+        </iframe>
+    </div>
     <p>This is home.</p>
 </body>
 </html>

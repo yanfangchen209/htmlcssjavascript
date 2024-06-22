@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='game.css'/>
     <title>Document</title>
     <script>
         const data = [["sea.jpg", "welcome to sea world"], ["desert.jpg", "welcome to desert"]]
@@ -23,6 +24,16 @@
     </script>
 </head>
 <body>
+    <div id="iframe-container">
+        <iframe src="menubar.html" 
+                width="100%" 
+                height="400" 
+                title="menu bar" 
+                frameborder="0" 
+                allowfullscreen 
+                sandbox="allow-same-origin allow-scripts">
+        </iframe>
+    </div>
     <image id="image" src='adventure.jpg' alt='explore' style='height: 200px;'></image><br>
     <span id='introduction'></span>
     <button onclick='handleClick(0)'>1</button>

@@ -1,0 +1,43 @@
+/* menubar.css */
+
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Styling for the ul element */
+ul {
+    list-style-type: none; /* Removes default list styles */
+    padding: 0;
+    text-align: center; /* Centers the list items */
+}
+
+/* Styling for the list items (anchors) */
+ul li {
+    display: inline-block; /* Displays items in a line */
+    margin-right: 20px; /* Adds spacing between items */
+}
+
+/* Styling for the anchor (link) within list items */
+ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets text color */
+    padding: 10px 15px; /* Adds padding inside links */
+    border-radius: 5px; /* Rounds corners of links */
+    background-color: #ddd; /* Background color of links */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for anchors */
+ul li a:hover {
+    background-color: #aaa; /* Darker background color on hover */
+    color: #fff; /* Light text color on hover */
+}
