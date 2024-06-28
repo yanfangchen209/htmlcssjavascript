@@ -13,7 +13,7 @@ function greetOnLoad() {
 function handleClick() {
     let userName = readCookie("irock_username");
     if (userName) {
-        alert("I'd like the attention." + userName);
+        alert("I'd like the attention " + userName);
     } else {
         userName = prompt("What's your name?");
         if (userName) {
@@ -31,7 +31,7 @@ function handleClick() {
     // Set a timer, alert will be executed after 5 seconds
     setTimeout(() => {
         document.getElementById('rock').src = 'originalStock.jpg';
-    }, 50000);
+    }, 5000);
 }
 
 function setRockSize() {
